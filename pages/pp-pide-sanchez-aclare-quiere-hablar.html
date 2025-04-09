@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El PP reclama a Sánchez que aclare de qué quiere hablar antes de la reunión del jueves, que ve un “paripé”</title>
+    <link rel="stylesheet" href="/styles/global-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="menu-container">
+        <div class="menu-wraper">
+            <nav class="menu-options">
+                <button class="menu-button"><span class="material-symbols-outlined">
+                    menu
+                    </span></button>
+                <div class="logo"><a href="../index.html"><img src="./../assets/images/el-pais.svg" alt=""></a></div>
+            </nav>
+            <button class="button-suscription" id="subscribeButton">
+                Suscribirme
+            </button>
+        </div>
+        
+    </header>
+    <div class="main-container">
+        <article class="main-article-content">
+            <h1 class="titulo">El PP reclama a Sánchez que aclare de qué quiere hablar antes de la reunión del jueves, que ve un “paripé”</h1>
+            <h2 class="subtitulo">Los populares advierten de que no darán ningún “cheque en blanco” al Gobierno en materia de defensa, pese a admitir que están de acuerdo en incrementar el presupuesto</h2>
+            <div class="img-container">
+                <figure>
+                    <img src="/assets/images/image-5.png" alt="La secretaria general del Partido Popular, Cuca Gamarra, durante la rueda de prensa en el Congreso de los Diputados, este lunes.">
+                    <figcaption>La secretaria general del Partido Popular, Cuca Gamarra, durante la rueda de prensa en el Congreso de los Diputados, este lunes.
+                        TAREK (EFE)</figcaption>
+                </figure>
+            </div>
+            <div class="author">
+                <div class="author--image-container">
+                    <figure>
+                        <img src="/assets/images/https___s3.amazonaws.com_arc-authors_prisa_5a503597-23c7-4203-ab6b-1daac1e42231.avif" alt="">
+                    </figure>
+                </div>
+                <div class="author--data-container">
+                    <p class="author--name">
+                        Elsa García de Blas
+                    </p>
+                    <div class="publication-date">
+
+                    </div>
+                    <div class="author--social-links">
+                        <a href=""><span class="material-symbols-outlined">
+                            add_circle
+                            </span></a>
+                        <a href=""><span class="material-symbols-outlined">
+                            add_circle
+                            </span></a>
+                        <a href=""><span class="material-symbols-outlined">
+                                add_circle
+                                </span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="noticia--content">
+                <div class="noticia--body">
+                    <p>Tras un fin de semana de choques cruzados entre Pedro Sánchez y Alberto Núñez Feijóo, el PP mantiene las espadas en alto ante la reunión que mantendrán este jueves el presidente del Gobierno y el líder del PP en La Moncloa para abordar el papel de España ante el conflicto de Ucrania. Los populares se han quejado este lunes de que el jefe del Ejecutivo lleva “15 meses sin ponerse en contacto con el PP” y lamentan que, aunque Feijóo asistirá al encuentro “por sentido de Estado”, Sánchez “está planteando las reuniones como un paripé de cara ...</p>
+                </div>
+
+                <aside class="noticia--aside">
+
+                </aside>
+            </div>
+        </article>
+    </div>
+
+    <div class="mask" id="maskModal">
+        <div class="modal">
+            <h3>Suscríbete al periódico</h3>
+            <form>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="apellidos">Apellidos:</label><br>
+                <input type="text" id="apellidos" name="apellidos" required><br><br>
+                <label for="apellidos">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="password">Contraseña:</label><br>
+                <input type="password" id="password" name="password" min="7" required><br><br>
+                <div class="modal-footer">
+                    
+                    <button type="button" value="cancel" class="button-cancel"
+                    id="cancelModal">Cancelar</button>
+                    <button type="submit" value="Submit" class="button-suscription"
+                    id="">Suscribirme</button>
+                    
+                </div>
+              </form>
+        </div>
+    </div>
+    
+    <script>
+        // Obtener el botón y la modal
+        const subscribeButton = document.getElementById('subscribeButton');
+        const maskModal = document.getElementById('maskModal');
+        const cancelModal = document.getElementById('cancelModal');
+
+        // Añadir evento click al botón
+        subscribeButton.addEventListener('click', function() {
+            maskModal.classList.add('display-modal');
+        });
+
+        cancelModal.addEventListener('click', function() {
+            maskModal.classList.remove('display-modal');
+        });
+
+        console.log();
+    </script>
+</body>
+</html>
