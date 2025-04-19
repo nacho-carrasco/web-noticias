@@ -1,3 +1,8 @@
+/******************************
+DEFAULT STYLES USED FOR MOBILE 
+    MOBILE FIRST STYLES
+******************************/
+
 *{
     padding: 0px;
     margin: 0px;
@@ -7,6 +12,8 @@
 :root{
     --bg-white: ffffff;
     --tx-dark: #111111;
+    --tx-medium: #464646;
+    --bg-l-gray: #f1f1f1;
     --border-gray: 2px solid #ebebeb;
     --border-radius-8px: 8px;
     --border-radius-12px: 12px;
@@ -18,7 +25,9 @@ html{
     font-family: "Source Serif 4", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-     font-style: normal;
+    font-style: normal;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 h1,h2,h3,h4,h5,h6,p, ol, ul{
@@ -37,6 +46,22 @@ h2{
 p{
     line-height: 116%;
     font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--tx-dark);
+}
+
+figcaption{
+    font-style: italic;
+    font-weight: 600;
+    color: var(--tx-medium);
+    padding: 0 16px;
+}
+
+input{
+    width: 100%;
 }
 
 .menu-container{
@@ -156,7 +181,14 @@ aside.opinion{
     border-bottom: none;
 }
 
+.card-titulares h2{
+    margin-bottom: 4px;
+}
+
 .metadata{
+    font-family: sans-serif;
+    font-size: 0.875rem;
+    line-height: 132%;
     color: #8b8b8b;
 }
 
@@ -171,6 +203,10 @@ aside.opinion{
 
 .card-titular:last-child{
     border-bottom: var(--border-gray);
+}
+
+.card-titular h2{
+    margin-bottom: 4px;
 }
 
 .card-titular .image{
@@ -215,6 +251,7 @@ aside.opinion{
 
 .card-opinion h2{
     font-style: italic;
+    margin-bottom: 2px;
 }
 
 hr.divider{
@@ -236,6 +273,10 @@ hr.divider{
     gap: 8px;
     margin: 0px 12px 16px 12px;
     padding: 0px 0px 12px 0px;
+}
+
+.card-ultimas-noticias h2{
+    margin-bottom: 2px;
 }
 
 .card-ultimas-noticias .image{
@@ -335,11 +376,15 @@ label{
     flex-direction: column;
     gap: 0;
     align-items: center;
-    padding: 40px 16px;
+    padding: 40px 16px 0px 16px;
 }
 
 .main-article-content{
     max-width: 1080px;
+}
+
+.text-wraper{
+    margin: 0 16px;
 }
 
 h1.titulo{
@@ -359,7 +404,7 @@ h2.subtitulo{
 
 .img-container{
     width: 100%;
-    margin-bottom: 32px;
+    margin: 32px 0;
 }
 
 .img-container figure{
@@ -395,7 +440,11 @@ h2.subtitulo{
 }
 
 .author--social-links{
-    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    height: 24px;
+    margin-bottom: 16px;
 }
 
 .author--social-links a{
@@ -403,7 +452,7 @@ h2.subtitulo{
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: #d4d4d4;
+    background-color: #eeeeee;
     text-align: center;
 }
 
@@ -413,35 +462,265 @@ h2.subtitulo{
     color: dimgray;
 }
 
-.social-button{
-
+a.comments-icon-link{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-end;
+    gap: 4px;
+    margin-bottom: 24px;
+    min-width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background-color: #eeeeee;
+    padding: 0 8px;
 }
 
+a span.comments-count{
+    display: inline-block;
+    font-family: sans-serif;
+    align-self: center;
+    font-size: 0.8rem;
+    line-height: 24px;
+
+    margin: 0;
+    color: var(--tx-medium);
+}
 
 .noticia--content{
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-
+    gap: 16px;
 }
 
 .noticia--body{
-    width: 70%;
+    width: 100%;
 }
 
 .noticia--body p{
+    font-size: 1.25rem;
     line-height: 150%;
+    margin-bottom: 24px;
 }
 
 .noticia--aside{
-    width: 30%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
 }
 
-@media only screen and (min-width:650px){
+.aside--ads-banner{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    border-radius: 8px;
+    margin: 32px 0;
+}
+
+.ad-banner-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--bg-l-gray);
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 4px;
+}
+
+.ad-banner-card img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    width: auto;
+    height: auto;
+}
+
+/*******
+COMMENTS
+********/
+.comments--title{
+    border-bottom: var(--border-gray);
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.comment-item{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.comment-avatar{
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 1px solid #d6d6d6;
+}
+
+.comment-avatar img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.comment-content{
+    width: calc(100% - 64px);
+}
+
+.comment-content p{
+    font-size: 1.2rem;
+    line-height: 120%;
+    font-family: sans-serif;
+    color: #464646;
+}
+
+.comment--user-name{
+    font-size: 1.3rem;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.comment-form{
+    margin-bottom: 32px;
+}
+
+.comment-form label{
+    width: 100%;
+    font-family: inherit;
+    font-weight: 700;
+}
+
+textarea.comment-input{
+    font-family: sans-serif;
+    min-width: 350px;
+    border: 1px solid #bebebe;
+    border-radius: 4px;
+    height: 32px;
+    padding: 8px 8px;
+    font-size: 16px;
+    color: #111111;
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 16px;
+    resize: none;
+}
+
+/************
+    FOOTER
+*************/
+.footer-wraper{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.footer{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0;
+    width: 100%;
+    max-width: 1080px;
+}
+
+.footer-column{
+    padding: 16px 32px;
+    width: 100%;
+}
+
+.footer-column img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+    box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.07);
+}
+
+.footer-column h3{
+    margin-bottom: 8px;
+}
+
+h3.newsletter-footer-title{
+    position: relative;
+    padding: 0px 0px 8px 0;
+    border-bottom: 1px solid #111111;
+    margin-bottom: 16px;
+}
+
+h3.newsletter-footer-title::after{
+    content: "";
+    height: 4px;
+    width: 132px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #111111;
+}
+
+.suscripcion-card{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(247, 207, 60, 0.1);
+    padding: 16px;
+    margin-bottom: 32px;
+}
+
+.suscripcion-card--titulo{
+    font-weight: 700;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.app-icons-wrapper{
+    display: flex;
+    flex-flow: row  nowrap;
+    gap: 16px;
+}
+
+.app-logo{
+    padding: 4px;
+}
+
+.app-logo img{
+    object-fit: contain;
+    box-shadow: none;
+}
+
+/*** TABLETS ***/
+@media only screen and (min-width:650px) and (max-width:999px){
     .ultimas-noticias{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .text-wraper{
+        margin: 0 24px;
+    }
+
+    .footer{
+        flex-flow: row wrap;
+    }
+
+    .footer-column{
+        width: 50%;
+        border-right: none;
+    }
 }
 
+/*** ESCRITORIO ***/
 @media only screen and (min-width: 1000px){
     .menu-wraper{
         flex-direction: row;
@@ -465,6 +744,10 @@ h2.subtitulo{
         border-bottom: none;
     }
 
+    .text-wraper{
+        margin: 0 48px;
+    }
+
     aside.opinion{
         width: 20%;
     }
@@ -475,6 +758,43 @@ h2.subtitulo{
 
     .card-titulares:last-child{
         border-bottom: none;
+    }
+
+    .noticia--content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .noticia--body{
+        width: calc(70% - 8px);
+    }
+    
+    .noticia--aside{
+        width: calc(30% - 8px);
+    }
+
+    .aside--ads-banner{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .footer{
+        flex-flow: row wrap;
+    }
+
+    .footer-column{
+        width: 33.333%;
+        border-right: 1px solid #d8d8d8;
+    }
+
+    .footer-column:last-of-type{
+        border-right: none;
+    }
+
+    .footer-menu-box:last-of-type{
+        border-bottom: none;
+        margin-bottom: 16px;
     }
 
 }
